@@ -1,0 +1,1 @@
+<script language='javascript'>self.location.href='gold/e0_1.php';</script>

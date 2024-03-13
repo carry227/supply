@@ -1,0 +1,15 @@
+CREATE TABLE gbook (
+   gb_serial mediumint(8) unsigned NOT NULL auto_increment,
+   gb_reid mediumint(8) unsigned DEFAULT '0' NOT NULL,
+   gb_date datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+   gb_show enum('Y','S','N') DEFAULT 'Y' NOT NULL,
+   gb_content text,
+   user_name varchar(50) NOT NULL,
+   user_email varchar(50),
+   user_web varchar(100),
+   user_ip char(15) NOT NULL,
+   user_show enum('快樂','微笑','感謝','得意','爽快','狂喜','歹謝','著急','質疑','糟糕','生氣','傷心','站長') DEFAULT '微笑' NOT NULL,
+   PRIMARY KEY (gb_serial),
+   INDEX gb_reid (gb_reid),
+   INDEX gb_show (gb_show)
+);

@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>使仆來電腦類二手書</title>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<script language="JavaScript1.2">
+
+var message="歡迎光臨『使仆來電腦類二手書』!" 
+var message=message+"          " 
+i="0"			         
+var temptitle=""            
+var speed="300"          
+
+function titler(){
+if (!document.all&&!document.getElementById)
+return
+document.title=temptitle+message.charAt(i)  //sets the initial title
+temptitle=temptitle+message.charAt(i)       //increases the title by one letter
+i++					    //increments the counter
+if(i==message.length)			    //determines the end of the message
+{
+i="0"					    //resets the counter at the end of the message
+temptitle=""				    //resets the title to a blank value
+}
+setTimeout("titler()",speed) 		   //Restarts. Remove line for no-repeat.
+}
+
+window.onload=titler
+</script> 
+</head>
+<frameset rows="60,*" cols="*" frameborder="NO" border="0" framespacing="0"> 
+  <frame name="topFrame" scrolling="NO" noresize src="Tframe.php" >
+  <frameset cols="109,*" frameborder="NO" border="0" framespacing="0" rows="*"> 
+    <frame name="leftFrame" noresize scrolling="NO" src="Lframe.htm">
+    <frame name="rightFrame" src="new_board.htm">
+  </frameset>
+</frameset>
+<noframes> 
+<body bgcolor="#FFFFFF" text="#000000">
+</body>
+</noframes> 
+</html>
